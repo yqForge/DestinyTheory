@@ -1,0 +1,12 @@
+.card { padding: 14px; border: 1px solid var(--ac-bdr); border-radius: 12px; background: var(--ac-bg); color: var(--tx-1); }
+.heading { margin: 0 0 5px; font-size: 15px; font-weight: 650; color: var(--tx-0); }
+.model { margin: 0 0 8px; overflow-wrap: anywhere; font-size: 12px; color: var(--tx-2); }
+.notice { margin: 0 0 12px; font-size: 13px; line-height: 1.65; }
+.confirm { display: block; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--ac); border-radius: 9px; background: var(--ac); color: #101820; font-size: 14px; font-weight: 650; cursor: pointer; }
+.confirm:disabled { opacity: .5; cursor: not-allowed; }
+.confirm:focus-visible, .retry:focus-visible, .details summary:focus-visible { outline: 2px solid var(--ac-dim); outline-offset: 3px; }
+.details { margin-top: 10px; font-size: 12px; color: var(--tx-2); }
+.details summary { cursor: pointer; }
+.details p { max-height: 110px; overflow-y: auto; margin: 7px 0 0; line-height: 1.65; }
+.error { font-size: 13px; color: var(--tx-1); overflow-wrap: anywhere; }
+.retry { margin-top: 8px; min-height: 36px; border: 1px solid var(--bdr-heavy); border-radius: 7px; background: var(--bg-card); color: var(--tx-1); padding: 5px 10px; font-size: 12px; cursor: pointer; }

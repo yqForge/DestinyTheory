@@ -1,0 +1,18 @@
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Local credentials and private research outputs
+/.pi/
+auth.json
+auth.json.*
+/research/
+/.artifacts/
+*.log
+/playwright-report/
+/test-results/

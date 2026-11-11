@@ -1,0 +1,22 @@
+.picker { min-width: 0; color: var(--tx-2); font-size: 12px; }
+.picker summary { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; padding: 5px 0; cursor: pointer; list-style: none; overflow-wrap: anywhere; }
+.picker summary::-webkit-details-marker { display: none; }
+.action { flex-shrink: 0; color: var(--ac-dim); text-decoration: underline; }
+.body { padding: 10px 0 4px; }
+.body label { display: block; margin-bottom: 5px; font-size: 12px; font-weight: 600; }
+.row { display: flex; gap: 6px; align-items: stretch; }
+.row select { flex: 1; width: 0; min-width: 0; min-height: 38px; padding: 6px; border: 1px solid var(--bdr-heavy); border-radius: 7px; background: var(--bg-0); color: var(--tx-1); font-size: 12px; }
+.row button { flex-shrink: 0; padding: 5px 8px; min-height: 38px; border: 1px solid var(--bdr-heavy); border-radius: 7px; color: var(--tx-1); background: var(--bg-0); font-size: 11px; cursor: pointer; }
+.row select:disabled, .row button:disabled { opacity: .5; cursor: not-allowed; }
+.body p { margin: 6px 0 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.connect { margin-bottom: 10px; }
+.connect > label, .login label { display: block; margin-bottom: 5px; font-size: 12px; font-weight: 600; }
+.connect select, .login select, .login input { width: 100%; min-width: 0; min-height: 38px; padding: 6px; border: 1px solid var(--bdr-heavy); border-radius: 7px; background: var(--bg-0); color: var(--tx-1); font-size: 12px; }
+.connect p, .login p { margin: 6px 0 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.authActions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.authActions button, .login button { min-height: 34px; padding: 5px 9px; border: 1px solid var(--bdr-heavy); border-radius: 7px; color: var(--tx-1); background: var(--bg-0); font-size: 11px; cursor: pointer; }
+.authActions button:disabled, .login button:disabled, .connect select:disabled { opacity: .5; cursor: not-allowed; }
+.login { margin-top: 8px; padding: 8px; border: 1px solid var(--ac-bdr); border-radius: 8px; background: var(--ac-bg); }
+.login form { display: grid; gap: 6px; margin-top: 8px; }
+.login a { color: var(--ac-dim); text-decoration: underline; }
+.picker summary:focus-visible, .connect select:focus-visible, .authActions button:focus-visible, .login button:focus-visible, .login input:focus-visible, .login select:focus-visible, .login a:focus-visible, .row select:focus-visible, .row button:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }

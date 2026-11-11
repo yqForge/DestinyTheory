@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: 类型检查 + 回归 + 构建
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci --no-audit --no-fund
+
+      - name: 类型检查
+        run: npm run typecheck
+
+      - name: 排盘、出生输入与 AI 回归（全部模拟）
+        run: npm test
+
+      - name: 生产构建
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'

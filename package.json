@@ -1,0 +1,38 @@
+{
+  "name": "destiny-theory",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test:birth": "tsx scripts/regression/birth-input.test.ts",
+    "test:ai": "tsx scripts/regression/interpret-api.test.ts && tsx scripts/regression/copilot-adapter.test.mts && tsx scripts/regression/model-selection.test.mts && tsx scripts/regression/provider-auth.test.mts",
+    "test:ui": "tsx scripts/browser/interpret-ui.test.mts && tsx scripts/browser/birth-range-scroll.test.mts && tsx scripts/browser/model-picker.test.mts",
+    "test": "tsx scripts/regression/pan-integrity.test.ts && tsx scripts/regression/dst-cn.test.ts && tsx scripts/regression/clock-adjust.test.ts && tsx scripts/regression/sizhu-lichun-boundary.test.ts && tsx scripts/regression/hongluan-tianxi.test.ts && tsx scripts/regression/famous-hour-consistency.test.ts && tsx scripts/regression/iztro-time-index-boundary.test.ts && tsx scripts/regression/solar-date-exists.test.ts && tsx scripts/regression/gender-validation.test.ts && tsx scripts/regression/natal-dual-sihua-same-palace.test.ts && tsx scripts/regression/neutral-naming.test.ts && tsx scripts/regression/leap-policy-validation.test.ts && tsx scripts/regression/form-true-solar-day.test.ts && tsx scripts/regression/birthform-birthinfo-consistency.test.ts && tsx scripts/regression/heming-refresh.test.ts && tsx scripts/regression/heming-stream.test.ts && tsx scripts/regression/patterns-sihua-bonus.test.ts && tsx scripts/regression/palace-minor-stars.test.tsx && tsx scripts/regression/patterns-dinggui.test.ts && tsx scripts/regression/patterns-dingfu.test.ts && tsx scripts/regression/patterns-dingpin.test.ts && tsx scripts/regression/patterns-dingza.test.ts && npm run test:birth && npm run test:ai"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "1.5.2",
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.0",
+    "html2canvas": "^1.4.1",
+    "iztro": "^2.5.8",
+    "lunar-javascript": "^1.7.3",
+    "next": "^16.4.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.0",
+    "playwright-core": "1.65.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5"
+  }
+}

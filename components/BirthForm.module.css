@@ -1,0 +1,24 @@
+.form { padding: 24px; border: 1px solid var(--bdr-med); border-radius: 20px; background: var(--bg-1); color: var(--tx-1); }
+.title { margin: 0 0 20px; text-align: center; color: var(--ac-dim); font-size: 17px; font-weight: 650; }
+.field { margin: 0 0 20px; padding: 0; border: 0; min-width: 0; }
+.label, .field legend { display: block; margin-bottom: 8px; padding: 0; font-size: 13px; font-weight: 600; color: var(--tx-1); }
+.grid2, .grid3 { display: grid; gap: 8px; }
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.control { display: block; width: 100%; min-width: 0; min-height: 44px; padding: 9px 10px; border: 1px solid var(--bdr-heavy); border-radius: 10px; background: var(--bg-0); color: var(--tx-1); font-family: inherit; font-size: 14px; }
+.control:focus-visible, .choices input:focus-visible, .check input:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
+.control:disabled { opacity: .5; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.choices label { display: flex; align-items: center; gap: 7px; padding: 9px 11px; border: 1px solid var(--bdr-heavy); border-radius: 9px; font-size: 13px; cursor: pointer; }
+.choices label:has(input:checked) { color: var(--ac-dim); border-color: var(--ac); background: var(--ac-bg); }
+.choices input, .check input { accent-color: var(--ac); }
+.check { display: flex; align-items: center; gap: 7px; margin-top: 10px; font-size: 13px; }
+.note { margin: 7px 0 0; font-size: 12px; line-height: 1.7; color: var(--tx-2); overflow-wrap: anywhere; }
+.preview { padding: 12px; margin: 12px 0; border: 1px solid var(--ac-bdr); border-radius: 10px; background: var(--ac-bg); font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.preview p { margin: 0; }
+.error { margin: 8px 0; color: var(--ji); font-size: 13px; line-height: 1.7; }
+.example { margin-top: 8px; min-height: 32px; border: 1px solid var(--bdr-heavy); border-radius: 7px; padding: 5px 9px; font-size: 12px; color: var(--tx-1); }
+.submit { width: 100%; min-height: 48px; border: 1px solid var(--ac); border-radius: 11px; padding: 12px; background: var(--ac); color: #101820; font-size: 15px; font-weight: 650; cursor: pointer; }
+.submit:disabled { opacity: .5; cursor: not-allowed; }
+.submit:focus-visible, .example:focus-visible { outline: 2px solid var(--ac); outline-offset: 3px; }
+@media (max-width: 480px) { .form { padding: 18px 14px; } .choices label { padding: 8px; } .control { padding: 8px; font-size: 13px; } }

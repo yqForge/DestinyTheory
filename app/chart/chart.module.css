@@ -1,0 +1,99 @@
+.page {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 20px 24px;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 72px;
+  padding: 10px 0;
+  background: var(--bg-0);
+  border-bottom: 1px solid var(--bdr-med);
+}
+
+.toolbar h1 { margin: 0; font-size: 19px; font-weight: 650; color: var(--tx-0); }
+.toolbar p { margin: 3px 0 0; font-size: 12px; color: var(--tx-2); }
+.reset { flex-shrink: 0; padding: 9px 12px; font-size: 13px; }
+
+.switcher { display: none; }
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  align-items: start;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.boardPane, .aiPane { min-width: 0; }
+.interpretation { flex: 1 1 0; min-height: 0; }
+.aiPane {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 104px;
+  height: calc(100vh - 124px);
+  height: calc(100dvh - 124px);
+  min-height: 380px;
+  max-height: 900px;
+}
+
+@media (max-width: 1023px) {
+  .page { padding: 0 12px 12px; }
+  .toolbar { height: 72px; }
+  .toolbar h1 { font-size: 17px; }
+  .toolbar p { font-size: 11px; }
+  .reset { font-size: 12px; padding: 8px; }
+  .switcher {
+    position: sticky;
+    top: 72px;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    height: 60px;
+    padding: 8px 0;
+    background: var(--bg-0);
+  }
+  .switcher button {
+    border: 1px solid var(--bdr-heavy);
+    border-radius: 10px;
+    background: var(--bg-1);
+    color: var(--tx-2);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .switcher button[aria-pressed="true"] {
+    color: var(--ac-dim);
+    border-color: var(--ac);
+    background: var(--ac-bg);
+  }
+  .workspace { display: block; padding-top: 4px; }
+  .boardPane[data-active="false"], .aiPane[data-active="false"] { display: none; }
+  .aiPane {
+    position: relative;
+    top: auto;
+    height: calc(100vh - 148px);
+    height: calc(100dvh - 148px);
+    min-height: 400px;
+    max-height: none;
+  }
+}
+
+@media (max-height: 560px) and (max-width: 1023px) {
+  .aiPane { min-height: 340px; }
+}
+
+@media print {
+  .toolbar, .switcher, .aiPane { display: none; }
+  .workspace { display: block; }
+  .boardPane[data-active="false"] { display: block; }
+}

@@ -1,0 +1,35 @@
+name: 程序问题 / Bug report
+description: 代码跑不起来、报错、页面显示异常
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        排盘本身不需要 API Key。AI 问题请写明服务商与界面提示，**不要贴密钥、令牌或 `.env.local` 内容**。合盘 AI（`/api/heming`）尚未实现。
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. npm ci
+        2. npm run dev
+        3. 打开 /chart，选 …… 点 ……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果（报错信息、截图）
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      placeholder: 例：macOS 15 / Node 22 / Chrome 140
